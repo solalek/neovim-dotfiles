@@ -1,7 +1,14 @@
+-- Nord colorscheme options
+vim.g.nord_contrast = true
+vim.g.nord_disable_background = true
+vim.g.nord_cursorline_transparent = false
+vim.g.nord_borders = false
+vim.g.nord_italic = false
+
 -- Function to set a colorscheme and customize background highlights
 function ColorMyPencils(color, bg)
     -- Use provided colorscheme or fallback to default
-    color = color or "rose-pine"
+    color = color or "nord"
 
     -- Optional argument for background, defaults to "none"
     bg = bg or "none"
@@ -22,5 +29,9 @@ function ColorMyPencils(color, bg)
 end
 
 -- Call the function with default colorscheme and background
-ColorMyPencils()
-
+--ColorMyPencils()
+local colorscheme = "nord"
+local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
+if not status_ok then
+  return
+end
