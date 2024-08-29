@@ -1,4 +1,5 @@
 require("config.lazy")
+require("plugins-configs.colorizer")
 require("plugins-configs.comments")
 require("plugins-configs.fugitive")
 require("plugins-configs.harpoon")
