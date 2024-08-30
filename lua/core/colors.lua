@@ -8,7 +8,7 @@ vim.g.nord_italic = false
 -- Function to set a colorscheme and customize background highlights
 function ColorMyPencils(color, bg)
     -- Use provided colorscheme or fallback to default
-    color = color or "rose-pine"
+    color = color or "carbonfox"
 
     -- Optional argument for background, defaults to "none"
     bg = bg or "none"
@@ -29,4 +29,10 @@ function ColorMyPencils(color, bg)
 end
 
 -- Call the function with default colorscheme and background
-ColorMyPencils()
+--ColorMyPencils()
+local status_ok, _ = pcall(vim.cmd.colorscheme, "github_dark_default")
+if not status_ok then
+    return
+end
+
+

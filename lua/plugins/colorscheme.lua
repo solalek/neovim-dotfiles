@@ -18,5 +18,11 @@ return {
     },
     { 
         "EdenEast/nightfox.nvim" 
+    },
+    {
+        'marko-cerovac/material.nvim'
+    },
+    {
+        'projekt0n/github-nvim-theme'
     }
 }
