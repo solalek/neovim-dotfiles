@@ -17,6 +17,7 @@ require('dashboard').setup {
                     { icon = '  ', desc = 'New File                   ', action = 'enew', key = 'n' },
                     { icon = '  ', desc = 'Find File                  ', action = 'Telescope find_files', key = 'f' },
                     { icon = '󰙰  ', desc = 'Recent Files               ', action = 'Telescope oldfiles', key = 'r' },
+                    { icon = '  ', desc = 'Projects                   ', action = 'cd ~/projects | Telescope find_files', key = 'p'},
                     { icon = '  ', desc = 'Shell config               ', action = 'e ~/.zshrc', key = 's'},
                     { icon = '  ', desc = 'Hyprland config            ', action = 'cd ~/Hyprland/ | e ~/Hyprland/hypr/hyprland.conf', key = 'h' },
                     { icon = '  ', desc = 'Neovim config              ', action = 'cd ~/.config/nvim | e ~/.config/nvim/init.lua', key = 'e'},

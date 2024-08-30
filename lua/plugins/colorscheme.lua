@@ -15,5 +15,8 @@ return {
 	},
     {
         "shaunsingh/nord.nvim",
+    },
+    { 
+        "EdenEast/nightfox.nvim" 
     }
 }
