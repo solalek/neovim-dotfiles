@@ -30,7 +30,7 @@ end
 
 -- Call the function with default colorscheme and background
 --ColorMyPencils()
-local status_ok, _ = pcall(vim.cmd.colorscheme, "github_dark_default")
+local status_ok, _ = pcall(vim.cmd.colorscheme, "moonfly")
 if not status_ok then
     return
 end
