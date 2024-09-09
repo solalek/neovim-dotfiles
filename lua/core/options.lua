@@ -17,3 +17,4 @@ vim.opt.showmatch = true
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.g.sudo_smart_edit = 1
+vim.opt.relativenumber = true

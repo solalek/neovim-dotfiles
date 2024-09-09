@@ -2,7 +2,7 @@
 
 require('nvim-treesitter.configs').setup({
   -- A list of parser names, or "all" (the listed parsers MUST always be installed)
-  ensure_installed = { "cmake", "cpp", "gitignore", "json", "json5","make", "python", "scss", "toml", "yaml", "bash", "javascript", "typescript", "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline" },
+  ensure_installed = { "java", "cmake", "cpp", "gitignore", "json", "json5","make", "python", "scss", "toml", "yaml", "bash", "javascript", "typescript", "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline" },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
@@ -21,22 +21,6 @@ require('nvim-treesitter.configs').setup({
     additional_vim_regex_highlighting = false,
   },
 })
-
--- Rainbow TreeSitter
--- require("nvim-treesitter.configs").setup {
---   highlight = {
---       -- ...
---   },
---   -- ...
---   rainbow = {
---     enable = true,
---     -- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for
---     extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
---     max_file_lines = nil, -- Do not enable for files with more than n lines, int
---     -- colors = {}, -- table of hex strings
---     -- termcolors = {} -- table of colour name strings
---   }
--- }
 
 -- LSP
 local lsp_zero = require('lsp-zero')
@@ -68,7 +52,7 @@ require('mason').setup({})
 require('mason-lspconfig').setup({
   -- Replace the language servers listed here
   -- with the ones you want to install
-  ensure_installed = {'tsserver', 'rust_analyzer', 'clangd' },
+  ensure_installed = { 'rust_analyzer', 'clangd' },
   handlers = {
     function(server_name)
       require('lspconfig')[server_name].setup({})
@@ -97,6 +81,6 @@ cmp.setup({
         ['<C-j>'] = cmp.mapping.select_next_item(),
         ['<C-Space>'] = cmp.mapping.complete(),
         ['<C-e>'] = cmp.mapping.abort(),
-        -- ['<CR>'] = cmp.mapping.confirm({ select = true }),
+        ['<C-l>'] = cmp.mapping.confirm({ select = true }),
     }),
 })
