@@ -77,10 +77,10 @@ cmp.setup({
         { name = 'git' },
     }),
     mapping = cmp.mapping.preset.insert({
-        ['<C-k>'] = cmp.mapping.select_prev_item(),
-        ['<C-j>'] = cmp.mapping.select_next_item(),
+        ['<C-p>'] = cmp.mapping.select_prev_item(),
+        ['<C-n>'] = cmp.mapping.select_next_item(),
         ['<C-Space>'] = cmp.mapping.complete(),
         ['<C-e>'] = cmp.mapping.abort(),
-        ['<C-l>'] = cmp.mapping.confirm({ select = true }),
+        ['<C-CR>'] = cmp.mapping.confirm({ select = true }),
     }),
 })
